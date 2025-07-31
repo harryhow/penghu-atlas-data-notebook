@@ -35,4 +35,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
           publish_branch: gh-pages # The branch to deploy to
+          target_folder: . # Deploy to the root of the gh-pages branch
           enable_jekyll: false # Disable Jekyll processing
