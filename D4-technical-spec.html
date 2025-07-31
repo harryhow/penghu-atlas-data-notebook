@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>我們的測試資料集 &#8212; Penghu Atlas - Soundscape Data Project</title>
+    <title>技術文件 v1.0 &#8212; Penghu Atlas - Soundscape Data Project</title>
   
   
   
@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -57,11 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'D2-test-data-set';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'D4-technical-spec';</script>
+    <link rel="canonical" href="/penghu-atlas-data-notebook/D4-technical-spec.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="技術文件 v1.0" href="D4-technical-spec.html" />
-    <link rel="prev" title="測試 depositar 資料集 API" href="ckan-api-test.html" />
+    <link rel="prev" title="我們的測試資料集" href="D2-test-data-set.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,10 +181,12 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="D1-technical-evaluation-process.html">聲音資料收取器材評估報告 v1.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D3-build-with-jb.html">使用 JB, CKAN API on depositor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ckan-api-test.html">測試 depositar 資料集 API</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">我們的測試資料集</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D4-technical-spec.html">技術文件 v1.0</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="D3-build-with-jb.html">使用 JB, CKAN API on depositor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ckan-api-test.html">實際透過 API 測試查詢 depositar 資料集 API</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="D2-test-data-set.html">我們的測試資料集</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">技術文件 v1.0</a></li>
 </ul>
 
     </div>
@@ -239,7 +241,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/harryhow/penghu-atlas-data-notebook" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -256,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FD2-test-data-set.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/harryhow/penghu-atlas-data-notebook/issues/new?title=Issue%20on%20page%20%2FD4-technical-spec.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +288,7 @@
       
       
       
-      <li><a href="_sources/D2-test-data-set.md" target="_blank"
+      <li><a href="_sources/D4-technical-spec.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -370,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>我們的測試資料集</h1>
+    <h1>技術文件 v1.0</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,7 +382,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-notes-on-our-test-data">Some notes on our test data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">系統設計</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-convention">Naming convention</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">操作手冊</a></li>
 </ul>
             </nav>
         </div>
@@ -392,11 +396,46 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>我們的測試資料集<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<section id="some-notes-on-our-test-data">
-<h2>Some notes on our test data<a class="headerlink" href="#some-notes-on-our-test-data" title="Link to this heading">#</a></h2>
-<p>//TBD</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="v1-0">
+<h1>技術文件 v1.0<a class="headerlink" href="#v1-0" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>系統設計<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>//WIP</p>
+<ul class="simple">
+<li><p>本系統採模組化設計，將資料採集、後設資料處理、資料儲存與展示分為獨立子系統，以利維護與擴充：</p>
+<ul>
+<li><p>資料儲存與存取：使用 depositar 作為研究資料儲存平台，負責高解析影像、聲音及其後設資料的管理與釋出。</p></li>
+<li><p>資料展示與 API 示範：使用 Jupyter Book 作為技術文件與互動示範平台，整合 CKAN API 存取展示功能，讓使用者可透過網頁閱讀、查詢與測試資料存取流程。</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="naming-convention">
+<h2>Naming convention<a class="headerlink" href="#naming-convention" title="Link to this heading">#</a></h2>
+<p>//WIP (參考trc提供文件)</p>
+<ul class="simple">
+<li><p>本系統採用結構化命名方式，便於資料的識別、排序與跨系統整合。主要針對資料夾與檔案之命名，採以下規則：</p></li>
+</ul>
+<p>日期範圍命名格式</p>
+<ul class="simple">
+<li><p>使用 YYYY-MM-DD 為基本日期格式，可延伸標示資料範圍與分批處理版本：
+例如：</p></li>
+</ul>
+<blockquote>
+<div><p>2025-06-07：代表單日資料（2025 年 6 月 7 日）。<br />
+2025-06-07–08：代表 2025 年 6 月 7 日至 6 月 8 日。<br />
+2025-06-07–07-13：代表 2025 年 6 月 7 日至 7 月 13 日。<br />
+2025-06-07–2026-04-09：代表跨年度資料，從 2025 年 6 月 7 日至 2026 年 4 月 9 日。<br />
+2025-06-01–07-31_1：2025 年 6 月至 7 月期間的第一批資料。<br />
+2025-06-01–07-31_2：同期間的第二批資料。</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>操作手冊<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>//WIP</p>
+<ul class="simple">
+<li><p>本節將提供各模組之操作流程說明，包括影像與音訊資料的上傳、後設資料標註方式與資料集發布流程。</p></li>
+</ul>
 </section>
 </section>
 
@@ -431,22 +470,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ckan-api-test.html"
+       href="D2-test-data-set.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">測試 depositar 資料集 API</p>
+        <p class="prev-next-title">我們的測試資料集</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="D4-technical-spec.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">技術文件 v1.0</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -464,7 +494,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-notes-on-our-test-data">Some notes on our test data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">系統設計</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-convention">Naming convention</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">操作手冊</a></li>
 </ul>
   </nav></div>
 
