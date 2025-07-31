@@ -19,7 +19,6 @@ kernelspec:
 The website is served as collaborative hub for documenting materials related to the Penghu Atla project, as well as the info center for depositar API integration. Now, we've tested data on the depositar's [demo site](https://demo.depositar.io/en/). 
 
 
-// 不知道為什麼以下 folium map code 沒有隱藏 :P
 ```{code-cell} ipython3
 :hide-input:
 
